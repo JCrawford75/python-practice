@@ -1,23 +1,12 @@
 import re
-# Early practice with regex and file handling, lots of commented out parts as I struggled to figure out where things went sideways.
-	# Open file
-	#f = open('regexData2.txt', 'r')
-	# Feed the file text into findall(); it returns a list of all the found strings
 
+# Improved and cleaned up some.
 
-	#count = 0
+# Open file
+f = open('regexData2.txt', 'r')
+# Feed the file text into findall(); it returns a list of all the found strings
+strings = re.findall(r'\d{3}\s\d{2}\s\d{4}', f.read())
 
-	#pattern = re.compile(r'\d{3}\s\d{2}\s\d{4}')
+print(strings)
 
-	#matches = pattern.finditer(f)
-
-	#for match in matches:
-	#    print(match)
-	# Open file
-	f = open('regexData2.txt', 'r')
-	# Feed the file text into findall(); it returns a list of all the found strings
-	strings = re.findall(r'\d{3}\s\d{2}\s\d{4}', f.read())
-
-	print(strings)
-
-	f.close()
+f.close()
